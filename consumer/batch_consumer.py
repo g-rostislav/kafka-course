@@ -10,9 +10,9 @@ class BatchMessageConsumer:
     ):
 
         self.conf = {
-            "group.id": group_id,
-            "enable.auto.commit": False,
-            "auto.offset.reset": "earliest",  # will be ignored for existing group.id
+            "group.id": group_id,             # Group id to parallelize workloads in the same group
+            "enable.auto.commit": False,      # Handle commits manually
+            "auto.offset.reset": "earliest",  # Will be ignored for existing group.id
             "bootstrap.servers": bootstrap_servers,
             # "debug": "consumer,cgrp,topic"
         }
