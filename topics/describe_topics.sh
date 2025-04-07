@@ -1,0 +1,1 @@
+kafka-topics.sh --describe --bootstrap-server localhost:9092
